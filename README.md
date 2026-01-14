@@ -1,11 +1,16 @@
 # Juice Shop DevOps Project 🚀
-Automated Testing with Cypress and Docker.
+
+โปรเจกต์ทดสอบระบบอัตโนมัติ (Automated Testing) สำหรับเว็บ Juice Shop โดยใช้ Docker และ Cypress
 
 ## 🛠 Tech Stack
 - **Infra:** Docker & Docker Compose
-- **Testing:** Cypress
+- **Testing:** Cypress (End-to-End Testing)
 - **CI/CD:** GitHub Actions
 
-## 📈 Status
-- [x] Scenario 1: Open/Close Dialog (Passed ✅)
-- [x] Scenario 2: Search Product (Passed ✅)
+## 📈 Test Status
+- [x] **Scenario 1:** Open/Close Product Dialog (Passed ✅)
+- [x] **Scenario 2:** Search Product "Apple" (Passed ✅)
+
+## 🏗 How to Run
+1. `docker compose up -d`
+2. `npx cypress run`
