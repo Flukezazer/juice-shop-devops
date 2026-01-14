@@ -1,0 +1,18 @@
+name: Juice Shop CI 🚀
+on: [push] # สั่งให้รันทุกครั้งที่ Push งาน
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. ดึงโค้ดจาก GitHub
+        uses: actions/checkout@v4
+
+      - name: 2. ติดตั้งและเปิดร้านค้า (Docker)
+        run: docker compose up -d
+
+      - name: 3. รันหุ่นยนต์เทส (Cypress)
+        uses: cypress-io/github-action@v6
+        with:
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 60
