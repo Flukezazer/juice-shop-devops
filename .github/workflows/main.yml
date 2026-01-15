@@ -19,12 +19,3 @@ jobs:
       - name: "4. System Admin Task: Database Backup"
         run: chmod +x backup_db.sh && ./backup_db.sh
 
-      - name: 5. Upload Backup Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: database-backups
-          path: |
-            *.sql
-            *.gz
-            backup/
-          if-no-files-found: error # จะได้แจ้งเตือนชัดเจนถ้าหาไม่เจอจริงๆ
