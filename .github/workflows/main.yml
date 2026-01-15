@@ -1,4 +1,4 @@
-name: Juice Shop CI/CD & Admin 🚀
+name: Juice Shop CI/CD & Admin 
 on: [push]
 
 jobs:
@@ -15,9 +15,10 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           wait-on: 'http://localhost:3000'
+          wait-on-timeout: 60
 
       - name: 4. System Admin Task: Database Backup
-        # รันสคริปต์ Backup หลังจากเทสผ่านแล้ว
+        # ต้องย่อหน้าให้ตรงกับบรรทัด run ด้านบน
         run: |
           chmod +x backup_db.sh
           ./backup_db.sh
