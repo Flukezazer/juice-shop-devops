@@ -18,7 +18,6 @@ jobs:
           wait-on-timeout: 60
 
       - name: 4. System Admin Task: Database Backup
-        # ต้องย่อหน้าให้ตรงกับบรรทัด run ด้านบน
         run: |
           chmod +x backup_db.sh
           ./backup_db.sh
