@@ -22,5 +22,9 @@ jobs:
       - name: 5. Upload Backup Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: db-backup-file
-          path: ./*.sql  # ระบุชื่อไฟล์หรือนามสกุลที่สคริปต์ backup_db.sh สร้างขึ้น
+          name: database-backups
+          path: |
+            *.sql
+            *.gz
+            backup/
+          if-no-files-found: error # จะได้แจ้งเตือนชัดเจนถ้าหาไม่เจอจริงๆ
