@@ -14,3 +14,6 @@
 ## 🏗 How to Run
 1. `docker compose up -d`
 2. `npx cypress run`
+
+
+    Last Update: 2026-01-15 🚀
