@@ -1,11 +1,8 @@
-name: Juice Shop CI/CD & Admin 🚀
-
 on: [push]
 
 jobs:
   admin-and-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: 1. Checkout Code
         uses: actions/checkout@v4
@@ -19,7 +16,5 @@ jobs:
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 60
 
-      - name: 4. System Admin Task: Database Backup
-        run: |
-          chmod +x backup_db.sh
-          ./backup_db.sh
+      - name: "4. System Admin Task: Database Backup"
+        run: chmod +x backup_db.sh && ./backup_db.sh
