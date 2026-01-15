@@ -18,3 +18,9 @@ jobs:
 
       - name: "4. System Admin Task: Database Backup"
         run: chmod +x backup_db.sh && ./backup_db.sh
+
+      - name: 5. Upload Backup Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: db-backup-file
+          path: ./*.sql  # ระบุชื่อไฟล์หรือนามสกุลที่สคริปต์ backup_db.sh สร้างขึ้น
