@@ -1,9 +1,11 @@
 name: Juice Shop CI/CD & Admin 🚀
+
 on: [push]
 
 jobs:
   admin-and-test:
     runs-on: ubuntu-latest
+
     steps:
       - name: 1. Checkout Code
         uses: actions/checkout@v4
