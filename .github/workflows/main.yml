@@ -1,4 +1,4 @@
-name: Juice Shop CI/CD & Admin 
+name: Juice Shop CI/CD & Admin 🚀
 on: [push]
 
 jobs:
